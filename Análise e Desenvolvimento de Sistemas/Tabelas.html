@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                background-color: rgb(208, 210, 229);
+                text-align: center;
+            }
+            .sec{
+                text-align: left;
+            }
+            .tab1, .tab2, .tab3, .tab4, .tab5{
+                text-align: center;
+            }
+        </style>
+        <title>Tabelas</title>
+    </head>
+    <body>
+        <section class="sec">
+            <h2>Tabelas</h2>
+                <b>"table"</b> - Container principal da tabela<br/>
+                <b>"tr"</b> - Representa as linhas, sendo composta pelas tags relacionadas às colunas.<br/>
+                <b>"td"</b> - Representa as colunas e precisa ser inserida dentro da tag de linha.<br/>
+                <b>"th"</b> - Também representa colunas e é usada para exibir o título de uma coluna, possuindo, neste sentido, função semântica. Assim como a tag <td>, deve estar contida em uma tag de linha. Este elemento apresenta estilos próprios, sendo renderizado de forma diferente das colunas comuns.<br/>
+                <b>"thead"</b> - Armazena o cabeçalho da tabela, sendo composto por linhas e colunas. Este elemento, a exemplo do que vimos anteriormente, tem função semântica em termos de estruturação de conteúdo.<br/>
+                <b>"tfoot"</b> - Armazena o rodapé da tabela, tendo também função semântica em termos de estruturação.<br/>
+                <h2>Exemplos:</h2>
+            <h2>Tabela Simples</h2>
+                <table class="tab1" width="100%" border="1">
+                    <tr>
+                        <td>Fernando</td>
+                        <td>Ana</td>
+                        <td>Jamily</td>
+                    </tr>
+                    <tr>
+                        <td>Ana</td>
+                        <td>Jamily</td>
+                        <td>Fernando</td>
+                    </tr>
+                    <tr>
+                        <td>Flamengo</td>
+                        <td>Real Madrid</td>
+                        <td>Barcelona</td>
+                    </tr>
+                    <tr>
+                        <td>Samsung</td>
+                        <td>Motorola</td>
+                        <td>Apple</tr>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>5</td>
+                        <td>10</td>
+                    </tr>
+                </table><br/>
+                    <h2>Tabela com Título</h2>
+                    <table class="tab2" width="100%" border="1">
+                        <tr>
+                            <th>Melhores Times</th>
+                            <th>Piores Times</th>
+                            <th>Melhores Seleções</th>
+                            <th>Piores Seleções</th>
+                        </tr>
+                        <tr>
+                            <td>Flamengo</td>
+                            <td>Botafogo</td>
+                            <td>Brasil</td>
+                            <td>Argentina</td>
+                        </tr>
+                        <tr>
+                            <td>Corinthians</td>
+                            <td>Vasco</td>
+                            <td>Alemanha</td>
+                            <td>Venezuela</td>
+                        </tr>
+                        <tr>
+                            <td>São Paulo</td>
+                            <td>Atlético Goianiense</td>
+                            <td>Bélgica</td>
+                            <td>França</td>
+                        </tr>
+                        <tr>
+                            <td>Amazonas FC</td>
+                            <td>Manaus FC</td>
+                            <td>Flamengo</td>
+                            <td>Bolívia</td>
+                        </tr>
+                    </table>
+                    <h2>Tabela com Cabeçalho e Rodapé</h2>
+                    <table class="tab3" width="100%" border="1">
+                        <thead>
+                            <tr>
+                                <th>Mês</th>
+                                <th>Hora/Aula</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Junho</td>
+                                <td>40</td>
+                            </tr>
+                            <tr>
+                                <td>Julho</td>
+                                <td>30</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <td>Total</td>
+                            <td>70</td>
+                        </tfoot>
+                    </table>
+                     <h2>Tabela com Colspan</h2>
+                    <table class="tab4" width="100%" border="1">
+                        <tr>
+                            <th>Aluno</th>
+                            <th colspan="4">Disciplinas</th>
+                        </tr>
+                        <tr>
+                            <td>Fernando</td>
+                            <td>HTML</td>
+                            <td>Ambiente Web</td>
+                            <td>Flamengo</td>
+                            <td>Brasil</td>
+                        </tr>
+                    </table>
+                    <h2>Tabela com Rowspan</h2>
+                    <table class="tab5" width="100" border="1">
+                        <tr>
+                            <th>Aluno</th>
+                            <td>Fernando</td>
+                            <th>Type</th>
+                            <td>Only</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="3">Disciplinas</th>
+                            <td>HTML</td>
+                            <th rowspan="3">Dark</th>
+                            <td>Blue</td>
+                        </tr>
+                        <tr>
+                            <td>Ambiente Web</td>
+                            <td>Light</td>
+                        </tr>
+                        <tr>
+                            <td>Css</td>
+                            <td>Python</td>
+                        </tr>
+            </table>
+        </section>
+    </body>
+</html>
