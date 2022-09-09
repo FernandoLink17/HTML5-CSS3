@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body{
+        background-color: rgb(208, 188, 228);
+    }
+    .tag1, .tag6, .tag7, .tag8, .tag9{
+        font-size: 20px;
+    }
+</style>
+<title>Formulário</title>
+</head>
+<body>
+    <section class="tag1">
+    <h2>Tag's de Formulário</h2>
+        <b>"form"</b> - Container principal do formulário.<br/>
+        <b>"input"</b> - Campo do formulário. Como há diversos tipos de campos, fazemos uso do atributo “type” para informar o tipo a ser utilizado.<br/>
+        <b>"textarea"</b> - Campo de texto de múltiplas linhas.<br/>
+        <b>"select" e "option"</b> - Campos de seleção, onde o container é definido pela tag "select" e os itens pela tag "option".<br/>
+        <b>"button"</b> - Campo de botão. Permite que uma ação seja executada no formulário – enviar o formulário, limpar os dados etc.<br/>
+        <b>"label"</b> - Usado para definir um título, uma legenda, que descreva para que serve cada campo do formulário.<br/>
+    </section>
+    <section class="tag2">
+    <h2>Demonstrando</h2>
+    <form action="página-que-processa-dados-do-form" method="post">
+        <fieldset>
+            <legend>Dados Gerais</legend>
+                <label for="nome">Nome:</label>
+                <input type="text" minlength="3" id="nome">
+                <label for="data_nascimento">Data de Nascimento:</label>
+                <input type="number" id="data_nascimento">
+                <label for="cpf">CPF:</label>
+                <input type="number" minlength="11" id="cpf">
+        </fieldset>
+    </section>
+    <section class="tag3">
+        <fieldset>
+            <legend>Endereço</legend>
+                <label for="tipo_endereço">Tipo:</label>
+                <select id="tipo_endereço">
+                <option value="">Selecione</option>
+                <option value="rua">Rua</option>
+                <option value="estrada">Estrada</option>
+                <option value="rodovia">Rodovia</option>
+                <option value="outros">Outros</option>
+                </select>
+                <label for="logradouro">Logradouro:</label>
+                <input type="text" id="logradouro">
+                <label for="número">N:</label>
+                <input type="number"id="número">
+                <label for="complemento">Complemento:</label>
+                <input type="text"id="complemento">
+        </fieldset>
+    </section>
+    <section class="tag4">
+        <fieldset>
+            <label for="msg">Mensagem:</label>
+            <textarea id="msg"></textarea>
+        </fieldset>
+    </section>
+    <section class="tag5">
+        <fieldset>
+        <button type="submit">Enviar Mensagem</button>
+        <button type="reset">Limpar o Formulário</button>
+        </fieldset>
+    </section>
+    </form>
+    <section class="tag6">
+    <h2>Cotinuação Tag's</h2>
+    <b>"form" "action"</b> - Define a URL (endereço) para a qual os dados do formulário serão enviados.<br/>
+    <b>"form" "method"</b> - Define o método HTTP (POST ou GET) para envio dos dados.<br/>
+    <b>"label" "for"</b> - Vincula a tag "label" ao campo ao qual ela se refere. Este vínculo faz com que seja possível clicar na label para ativar o campo relacionado.<br/>
+    <b>"input" "minlength", "maxlength"</b> - Definem a quantidade de caracteres mínima e máxima, respectivamente, permitida em um campo.<br/>
+    <b>"input", "button" "type"</b> - Define o tipo do campo e, sobretudo, como ele se comporta.<br/>
+    <b>"option" "value"</b> - Este atributo também pode ser utilizado na tag "input". Ele define o valor do campo. No caso da "option", os seus valores possíveis são previamente definidos quando a página é codificada. Já na "input", embora também possa ser previamente definido, normalmente é o usuário quem define o seu valor.<br/>
+    </section>
+    <section class="tag7">  
+        <h2>Outras tag's</h2>
+            <b>"password"</b> - Mascara o texto com asteriscos.<br/>
+            <b>hidden</b> - Esconde o campo para não ser exibido no navegador.<br/>
+            <b>checkbox</b> - Usado para seleção de valor através de click/check.<br/>
+            <b>radio</b> - Usado para seleção exclusiva de valor – quando é apresentada mais de uma opção, apenas uma poderá ser selecionada, ao contrário do tipo “checkbox”.<br/>
+            <b>submit</b> - Associada à tag "button", dispara o evento que envia/submete o formulário.<br/>
+            <b>reset</b> - Associada à tag "button", dispara o evento que limpa os valores do formulário.<br/>
+            <b>button</b> - Uma tag "input" pode ser do tipo “button” – exercendo, assim, a mesma função da tag "button".<br/>
+    </section>
+    <section class="tag8">
+        <h2>Novas atributos</h2>
+        <b>placeholder</b> - Exibir um texto no campo de input. Utilizado para dar uma dica ao usuário sobre o dado a ser inserido.<br/>
+        <b>required</b> - Determinar se um campo é obrigatório. Utilizado na validação dos dados de um formulário.<br/>
+        <b>autofocus</b> - Fixar o foco no campo. Utilizado quando desejamos que, ao carregar o formulário, um determinado campo seja focado.<br/>
+        <b>pattern</b> - Validar o valor de um campo com base em uma expressão regular.
+        (As RegEX – expressões regulares – podem ser consideradas um recurso de linguagem de programação para a análise e manipulação de texto.) O campo de tel. é um bom exemplo de utilização desse atributo. Com ele podemos, por exemplo, determinar a quantidade de caracteres e o formato esperado para um campo.<br/>
+    </section>
+    <section class="tag9">
+        <h2>Tipos</h2>
+            <b>tel</b> - Inserir números de telefone. Para uma melhor usabilidade, deve ser usado em conjunto com o atributo pattern.<br/>
+            <b>datetime</b> -Inserir datas com o fuso horário em UTC a partir de um calendário.<br/>
+            <b>date</b> - Inserir datas sem fuso horário a partir de um calendário.<br/>
+            <b>number</b> - Inserir números. Cria um componente diferente do imput normal, em que, por meio de setas, os números podem ser incrementados ou decrementados.<br/>
+    </section>
+    <br/>
+    <br/>
+    <br/>
+</body>
+</html>
